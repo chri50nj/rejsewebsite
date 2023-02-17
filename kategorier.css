@@ -1,0 +1,59 @@
+body {
+  font-family: Helvetica, sans-serif;
+  text-align: center;
+}
+html {
+  --hovedfarve: #546a1f;
+}
+h1, h2 {
+  text-transform: uppercase;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.7);
+}
+p {
+  color: rgba(0, 0, 0, 0.6);
+}
+a {
+  text-decoration: none;
+  color:rgba(0, 0, 0, 0.6);
+}
+img {
+  max-width: 100%;
+}
+article {
+  max-width: 400px;
+  text-align: center;
+  margin: 5px;
+  border: solid rgba(0, 0, 0, 0.188) 0.1px;
+
+}
+@media (min-width:400px) {
+#kategorier {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2em;
+    padding: 5%;
+}
+}
+@media (min-width: 800px) {
+#kategorier {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2em;
+    padding: 5%;
+} 
+}
+
+.link{
+    padding: 40px;
+    text-align: center;
+    border-radius: 5px;
+}
+.link a {
+  background-color: #546a1f;
+  color: white;
+  text-transform: uppercase;
+  padding: 5%;
+  border-radius: 5px;
+  font-size: 12px;
+}
