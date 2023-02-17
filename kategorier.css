@@ -1,7 +1,9 @@
 body {
   font-family: Helvetica, sans-serif;
   text-align: center;
+  margin: 5%;
 }
+
 html {
   --hovedfarve: #546a1f;
 }
@@ -10,8 +12,12 @@ h1, h2 {
   font-weight: 400;
   color: rgba(0, 0, 0, 0.7);
 }
+h2 {
+    font-size: 20px;
+}
 p {
   color: rgba(0, 0, 0, 0.6);
+  font-size: 15px;
 }
 a {
   text-decoration: none;
@@ -29,11 +35,12 @@ article {
 }
 @media (min-width:400px) {
 #kategorier {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: column;
     gap: 2em;
-    padding: 5%;
+    align-items: center;
 }
+
 }
 @media (min-width: 800px) {
 #kategorier {
