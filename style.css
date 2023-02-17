@@ -37,6 +37,7 @@ html {
     height: 26px;
     cursor: pointer;
     z-index: 1;
+    left: 2rem;
   }
   /* menu krydset, farve, størrelse osv, før menu boksen */
   .menu__btn > span,
@@ -114,6 +115,7 @@ html {
     height: 26px;
     cursor: pointer;
     z-index: 1;
+    left: 1.5rem;
   }
   /* menu krydset, farve, størrelse osv, før menu boksen */
   .menu__btn > span,
