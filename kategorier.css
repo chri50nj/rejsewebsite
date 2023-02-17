@@ -51,6 +51,11 @@ article {
 } 
 }
 
+.kat_tekst {
+    max-width: 95%;
+    text-align: center;
+}
+
 .link{
     padding: 40px;
     text-align: center;
