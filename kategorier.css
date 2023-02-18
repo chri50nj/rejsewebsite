@@ -1,0 +1,87 @@
+body {
+  font-family: Helvetica, sans-serif;
+  text-align: center;
+  margin: 5%;
+}
+
+html {
+  --hovedfarve: #546a1f;
+}
+h1,
+h2 {
+  text-transform: uppercase;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.7);
+}
+h2 {
+  font-size: 20px;
+}
+p {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 15px;
+}
+a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.6);
+}
+img {
+  max-width: 100%;
+}
+article {
+  max-width: 400px;
+  text-align: center;
+  margin: 5px;
+  border: solid rgba(0, 0, 0, 0.188) 0.1px;
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 300px) {
+  #kategorier {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    align-items: center;
+  }
+}
+
+@media (min-width: 700px) {
+  #kategorier {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2em;
+    padding: 5%;
+  }
+}
+@media (min-width: 1000px) {
+  #kategorier {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2em;
+    padding: 5%;
+  }
+}
+
+.kat_tekst {
+  margin: 10px;
+  text-align: center;
+}
+
+.link {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  text-align: center;
+  border-radius: 5px;
+}
+.link a {
+  border: #546a1f solid 1px;
+  color: #546a1f;
+  text-transform: uppercase;
+  padding: 10px;
+  border-radius: 15px;
+  font-size: 12px;
+}
+
+.link a:hover {
+    background-color: #546a1f;
+    color: white;
+}
