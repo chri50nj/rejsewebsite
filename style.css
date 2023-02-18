@@ -6,6 +6,9 @@ html {
   --hovedfarve: #546a1f;
   --header: #546a1f6f;
 }
+body {
+  margin: 5%;
+}
 /********************************** Mobil **********************************/
 @media (max-width: 620px) {
   /* toogle i højre hjørne (tjekboks), væk med den */
