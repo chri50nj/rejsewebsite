@@ -262,4 +262,33 @@ article {
     color: white;
 }
 
+/* ***************** breadcrumbs ****************** */
+.breadcrumbs {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    padding-left: 0;
+}
+.breadcrumbs li {
+  list-style: none;
+}
+.breadcrumbs a {
+    font-size: 12px;
+    background-color: white;
+    text-decoration: none;
+    color: var(--hovedfarve);
+
+ }
+.breadcrumbs p {
+    font-size: 12px;
+ }
+ .breadcrumbs a::after {
+    content: ">";
+    padding-left: 20px;
+ }
+ .breadcrumbs a:hover {
+  color: black;
+ }
 
