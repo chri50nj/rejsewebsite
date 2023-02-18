@@ -5,13 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="kategorier.css" />
+    <link rel="stylesheet" href="style.css">
     <title>Kategorier</title>
   </head>
-  <body>
-    <header></header>
+  <body id="kategorier_body">
+    <header>
+      <div class="hamburger-menu">
+        <input id="menu__toggle" type="checkbox" />
+        <label class="menu__btn" for="menu__toggle">
+          <span></span>
+        </label>
+        <ul class="menu__box">
+          <li><a class="menu__item" href="#">Forside</a></li>
+          <li><a class="menu__item" href="#">Kategorier</a></li>
+          <li><a class="menu__item" href="ferieliste.html">Ferieliste</a></li>
+        </ul>
+      </div>
+    </header>
+
     <main>
       <h1>Hvilken rejse er du til?</h1>
-      <p>
+      <p class="tekst">
         Drømmer du om at tage hele familien til en pulserende storby? Eller er
         du måske mere til sol og strand med kæresten? Uanset hvilken ferie du
         går og drømmer om, er vi sikre på at du kan finde den helt rigtige

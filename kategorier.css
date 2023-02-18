@@ -1,4 +1,4 @@
-body {
+#kategorier_body {
   font-family: Helvetica, sans-serif;
   text-align: center;
   margin: 5%;
@@ -7,16 +7,20 @@ body {
 html {
   --hovedfarve: #546a1f;
 }
-h1,
-h2 {
+h1 {
+  font-family: "Overskrift", system-ui;
+  font-size: 70px;
+  font-weight: 400;
+  color:#546a1f;
+  margin: 20px;
+}
+#kategorier_body h2 {
+  font-size: 20px;
   text-transform: uppercase;
   font-weight: 400;
   color: rgba(0, 0, 0, 0.7);
 }
-h2 {
-  font-size: 20px;
-}
-p {
+#kategorier_body p {
   color: rgba(0, 0, 0, 0.6);
   font-size: 15px;
 }
@@ -60,7 +64,10 @@ article {
     padding: 5%;
   }
 }
-
+#kategorier_body .tekst {
+  margin-inline: 10%;
+  margin-bottom: 20px;
+}
 .kat_tekst {
   margin: 10px;
   text-align: center;
