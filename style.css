@@ -2,12 +2,14 @@
   margin: 0;
   box-sizing: border-box;
 }
+main {
+  margin: 5%;
+}
 html {
   --hovedfarve: #546a1f;
   --header: #546a1f6f;
 }
 body {
-  margin: 5%;
   font-family: Helvetica, sans-serif;
 }
 h1{
@@ -178,8 +180,16 @@ h1{
 }
 
 /** Kontakt form **/
+#kontakt_body p {
+  text-align: center;
+  margin-inline: 20%;
+  font-family: Helvetica, sans-serif;
+  color: rgba(0, 0, 0, 0.6);
+}
 form {
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding: 2rem;
   border-radius: 8px;
   gap: 30px;
@@ -195,17 +205,32 @@ textarea,
 select,
 button {
   display: block;
-  color: var(--tekstfarve);
-  font-weight: bold;
+  color: rgba(0, 0, 0, 0.7);
+  font-weight: 800;
+  font-family: Helvetica, sans-serif;
+  
+}
+label {
+  text-transform: uppercase;
+  font-size: 15px;
 }
 
 button {
-  color: white;
+  color: var(--hovedfarve);
   width: 145px;
   height: 40px;
-  border-radius: 5px;
+  border-radius: 20px;
+  border: var(--hovedfarve) solid 1px;
   font-size: 1.3rem;
-  background-color: #505b4f;
+  background-color: white;
+  text-transform: uppercase;
+  font-family: Helvetica, sans-serif;
+  font-size: 15px;
+}
+
+button:hover {
+  background-color: var(--hovedfarve);
+  color: white;
 }
 
 /*singleview*/
@@ -337,13 +362,14 @@ img{
  }
 .breadcrumbs p {
     font-size: 12px;
+    color: rgba(0, 0, 0, 0.6);
  }
  .breadcrumbs a::after {
     content: ">";
-    padding-left: 20px;
+    padding-left: 15px;
  }
  .breadcrumbs a:hover {
-  color: black;
+  color: rgba(0, 0, 0, 0.6);
  }
 
 
@@ -364,6 +390,7 @@ img{
   margin: 0;
 }
 /* ******* forside ************ */
+
 .landingpage h1 {
   color: white;
   font-size: 60px;
@@ -379,7 +406,7 @@ img{
    text-align: center;
 }
 
-#index_body {
+#index_body main{
   margin: 0;
 
 }
@@ -488,8 +515,11 @@ footer {
   display: flex;
   flex-direction: row;
  justify-content: center;
+ align-items: center;
   gap: 100px;
+  margin: 0;
   margin-top: 2em;
+
 }
 footer h3 {
   font-size: 12px;
@@ -508,7 +538,8 @@ footer a {
 }
 footer a:hover {
   color: white;
-  border-color: white;
+  background-color: var(--hovedfarve);
+  border-color: var(--hovedfarve);
 }
 .socials {
   display: flex;

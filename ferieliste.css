@@ -172,10 +172,8 @@
   src: url("font/hindguntur-regular-webfont.woff2");
 }
 
-#ferieliste_body {
-  margin: 5%;
-}
 main {
+    margin: 5%;
     font-family: Helvetica, sans-serif;
   text-align: center;
 }
