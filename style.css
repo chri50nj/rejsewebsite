@@ -232,6 +232,7 @@ img{
   text-align: center;
   color: var(--hovedfarve);
   font-size: 70px;
+  margin: 20px;
 }
 .about-section {
   background: url(/img/Storby/barcelona-19.webp) no-repeat left;
@@ -321,6 +322,8 @@ img{
     align-items: center;
     gap: 10px;
     padding-left: 0;
+    margin: 16px;
+    margin-left: 0;
 }
 .breadcrumbs li {
   list-style: none;
@@ -358,6 +361,7 @@ img{
   font-weight: 400;
   color:#546a1f;
   font-style: italic;
+  margin: 0;
 }
 /* ******* forside ************ */
 .landingpage h1 {
