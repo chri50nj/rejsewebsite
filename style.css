@@ -510,7 +510,7 @@ footer img {
   max-width: 30px;
 }
 footer {
-  background-color: var(--header);
+  background-color:#546a1f19;
   padding: 5%;
   display: flex;
   flex-direction: row;
