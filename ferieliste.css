@@ -184,7 +184,7 @@ html {
 }
 h1 {
   font-family: "Overskrift", system-ui;
-  font-size: 70px;
+  font-size: 60px;
   font-weight: 400;
   color:#546a1f;
   margin: 20px;
@@ -199,7 +199,7 @@ h2 {
 }
 #ferieliste a {
   text-decoration: none;
-  color: rgba(0, 0, 0, 0.6);
+
 }
 img {
   max-width: 100%;

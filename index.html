@@ -1,38 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="ferieliste.css" />
     <title>Forside</title>
-</head>
+  </head>
 
-<body id="index_body">
+  <body id="index_body">
     <header>
-        <div class="hamburger-menu">
-            <input id="menu__toggle" type="checkbox">
-            <label class="menu__btn" for="menu__toggle">
-                <span></span>
-            </label>
-            <ul class="menu__box">
-                <li><a class="menu__item" href="index.html">Forside</a></li>
-                <li><a class="menu__item" href="kategorier.html">Kategorier</a></li>
-                <li><a class="menu__item" href="ferieliste.html">Ferieliste</a></li>
-            </ul>
-        </div>
-        <div class="logo">
-            <img src="img/logo.png" alt="logo">
-            <h1> Rejse Bloggen</h1>
-        </div>
+      <div class="hamburger-menu">
+        <input id="menu__toggle" type="checkbox" />
+        <label class="menu__btn" for="menu__toggle">
+          <span></span>
+        </label>
+        <ul class="menu__box">
+          <li><a class="menu__item" href="index.html">Forside</a></li>
+          <li><a class="menu__item" href="kategorier.html">Kategorier</a></li>
+          <li><a class="menu__item" href="ferieliste.html">Ferieliste</a></li>
+        </ul>
+      </div>
+      <div class="logo">
+        <img src="img/logo.png" alt="logo" />
+        <h1>Rejse Bloggen</h1>
+      </div>
     </header>
     <main>
       <section class="landingpage">
-            <h1>Hvor skal turen gå til?</h1>
-            <a href="kategorier.html">Find din næste rejse</a>
+        <h1>Hvor skal turen gå til?</h1>
+        <a href="kategorier.html">Find din næste rejse</a>
+      </section>
+
+      <section class="landingpage_2">
+        <div>
+          <h1 class="h1_left">Populære rejsemål</h1>
+          <p>Få inspiration til din næste rejse eller læs om de forskellige destinationer. </p>
+        </div>
+        <div class="feriemål">
+          <article class="ferie">
+            <img src="img/charter/thailand_5.webp" alt="Thailand" />
+            <div class="ferie_tekst">
+              <h2>Thailand</h2>
+              <a class="link" href="singleview.html"
+                >Læs mere om destinationen</a
+              >
+            </div>
+          </article>
+
+          <article class="ferie">
+            <img src="img/charter/grancanaria_10.webp" alt="Gran Canaria" />
+            <div class="ferie_tekst">
+              <h2>Gran Canaria</h2>
+              <a class="link" href="singleview.html"
+                >Læs mere om destinationen</a
+              >
+            </div>
+          </article>
+
+          <article class="ferie">
+            <img src="img/charter/cypern_9.webp" alt="Cypern" />
+            <div class="ferie_tekst">
+              <h2>Cypern</h2>
+              <a class="link" href="singleview.html"
+                >Læs mere om destinationen</a
+              >
+            </div>
+          </article>
+        </div>
       </section>
     </main>
-</body>
-
+  </body>
 </html>

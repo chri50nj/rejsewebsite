@@ -8,6 +8,7 @@ html {
 }
 body {
   margin: 5%;
+  font-family: Helvetica, sans-serif;
 }
 h1{
    font-family: "Overskrift", system-ui;
@@ -85,10 +86,11 @@ h1{
   .menu__item {
     display: block;
     padding: 12px 24px;
-    color: #333;
-    font-size: 28px;
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 15px;
     text-decoration: none;
     transition-duration: 0.25s;
+    text-transform: uppercase;
   }
 }
 /********************************** Computer **********************************/
@@ -163,10 +165,11 @@ h1{
   .menu__item {
     display: block;
     padding: 12px 24px;
-    color: #333;
-    font-size: 28px;
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 20px;
     text-decoration: none;
     transition-duration: 0.25s;
+    text-transform: uppercase;
   }
   /* hover af teksten i menu boksen */
   .menu__item:hover {
@@ -241,7 +244,7 @@ img{
 .inner-container {
   width: 55%;
   float: right;
-  background-color: #afb966;
+  background-color: #B5BE9D;
   padding: 150px;
   
 }
@@ -249,22 +252,25 @@ img{
 .inner-container h2 {
   font-family: "h2", system-ui;
   margin-bottom: 30px;
-  font-size: 40px;
+  font-size: 30px;
   font-weight: 900;
+  color: rgba(0, 0, 0, 0.7);
+  text-transform: uppercase;
 }
 
 .text {
-  font-family: "tekst", system-ui;
+  font-family: Helvetica, system-ui;
   font-size: 18px;
   line-height: 30px;
   text-align: justify;
   margin-bottom: 40px;
+  
 }
 .info-section{
   padding: 100px;
 }
 .info-section p{
-  font-family: "tekst", system-ui;
+  font-family: Helvetica, system-ui;
   font-size: 18px;
   line-height: 1.6rem;
   border: solid 2px rgb(235, 231, 231);
@@ -272,7 +278,7 @@ img{
 
 }
  .info-section h2{
-  font-family: "h2", system-ui;
+  font-family: Helvetica, system-ui;
   text-align: center;
   font-size: 40px;
   color: var(--hovedfarve);
@@ -353,7 +359,7 @@ img{
   color:#546a1f;
   font-style: italic;
 }
-
+/* ******* forside ************ */
 .landingpage h1 {
   color: white;
   font-size: 60px;
@@ -392,3 +398,86 @@ img{
 .landingpage a:hover {
   border-color: var(--hovedfarve);
 }
+
+@media (min-width:900px) {
+.landingpage_2 {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}  
+.h1_left {
+  text-align: center;
+}
+}
+
+
+
+@media (min-width: 300px) {
+  .feriemål {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    align-items: center;
+  }
+}
+
+@media (min-width: 800px) {
+  .feriemål {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2em;
+    padding: 5%;
+  }
+}
+@media (min-width: 1100px) {
+  .feriemål {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2em;
+    padding: 5%;
+  }
+}
+
+.link {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  text-align: center;
+  border-radius: 15px;
+}
+
+.h1_left {
+text-align: left;
+margin-left: 5%;
+padding-top: 20px;
+font-size: 50px;
+}
+
+.feriemål a {
+  border: #546a1f solid 1px;
+  color: #546a1f;
+  text-transform: uppercase;
+  padding: 10px;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+ .feriemål a:hover {
+    background-color: #546a1f;
+    color: white;
+}
+
+article {
+  max-width: 400px;
+  text-align: center;
+  margin: 5px;
+  border: solid rgba(0, 0, 0, 0.188) 0.1px;
+  display: flex;
+  flex-direction: column;
+}
+
+.landingpage_2 p {
+  text-align: left;
+  margin-left: 5%;
+  padding-bottom: 40px;
+  color: rgba(0, 0, 0, 0.6);
+}
+/*  */
