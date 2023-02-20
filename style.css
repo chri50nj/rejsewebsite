@@ -249,9 +249,15 @@ button:hover {
 
 img{
   width: 100%;
+  height: 100%;
 }
 
+.about{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
 
+}
 .h1_single{
   font-family: "Overskrift", system-ui;
   text-align: center;
@@ -259,20 +265,13 @@ img{
   font-size: 70px;
   margin: 20px;
 }
-.about-section {
-  background: url(/img/Storby/barcelona-19.webp) no-repeat left;
-  background-size: 55%;
-  overflow: hidden;
-  padding: 50px 0;
-  
-}
+
 
 .inner-container {
-  width: 55%;
-  float: right;
   background-color: #B5BE9D;
-  padding: 130px;
-  
+  padding: 100px;
+  margin: 30px;
+  gap: 30px;
 }
 
 .inner-container h2 {
@@ -292,14 +291,12 @@ img{
   margin-bottom: 40px;
   
 }
-.info-section{
-  padding: 100px;
-}
+
 .info-section p{
   font-family: Helvetica, system-ui;
   font-size: 18px;
   line-height: 1.6rem;
-  border: solid 2px rgb(235, 231, 231);
+  border: solid rgba(0, 0, 0, 0.188) 0.1px;
   padding: 40px;
 
 }
@@ -315,27 +312,34 @@ img{
   .inner-container {
     padding: 80px;
   }
-}
 
-@media screen and (max-width: 1000px) {
-  .about-section {
-    background-size: 100%;
-    padding: 100px 40px;
-  }
+
+@media screen and (max-width: 900px) {
+ 
   .inner-container {
     width: 80%;
+  }
+  .about{
+    display: grid;
+    grid-template-columns: 1fr ;
+    grid-template-rows: 1fr;
+  
   }
 }
 
 @media screen and (max-width: 600px) {
-  .about-section {
-    padding: 0;
-  }
+  
   .inner-container {
     padding: 60px;
   }
+  .about{
+    display: grid;
+    grid-template-columns: 1fr ;
+    grid-template-rows: 1fr;
+  
+  }
 }
-
+}
 
 
 
