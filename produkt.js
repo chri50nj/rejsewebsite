@@ -1,4 +1,13 @@
-const url = "https://rejseguide-349f.restdb.io/rest/destinationer";
+const urlParams = new URLSearchParams(window.location.search);
+console.log("urlParams", urlParams);
+
+const _id = urlParams.get("_id");
+console.log("id", _id);
+const url = `https://rejseguide-349f.restdb.io/rest/destinationer/${_id}`;
+console.log(url);
+const imagePath = `https://rejseguide-349f.restdb.io/rest/destinationer/${_id}`.webp;
+
+//const url = "https://rejseguide-349f.restdb.io/rest/destinationer"";
 
 const options = {
   headers: {
@@ -6,21 +15,18 @@ const options = {
   },
 };
 
-async function hentData() {
-  const resspons = await fetch(url, options);
-  const json = await resspons.json();
-  vis(json);
+function hentData() {
+  fetch(url, options)
+    .then((res) => res.json())
+    .then(visProdukt);
 }
 
-const main = document.querySelector("main");
-const template = document.querySelector("template").content;
+function visProdukt(rejse) {
+  console.log(rejse);
+  document.querySelector(".h1_single").textContent = rejse.Destination;
 
-function vis(json) {
-  console.log(json);
-  json.forEach((rejse) => {
-    const klon = template.cloneNode(true);
-    klon.querySelector(".h1_single").textContent = rejse.Destination;
-    main.appendChild(klon);
-  });
+  document.querySelector("#about_img").src = "img/" + rejse.billede;
+  document.querySelector("img").src = imagePath;
 }
+
 hentData();
