@@ -12,10 +12,10 @@ html {
 body {
   font-family: Helvetica, sans-serif;
 }
-h1{
-   font-family: "Overskrift", system-ui;
-   font-size: 70px;
-} 
+h1 {
+  font-family: "Overskrift", system-ui;
+  font-size: 70px;
+}
 /********************************** Mobil **********************************/
 @media (max-width: 620px) {
   /* toogle i højre hjørne (tjekboks), væk med den */
@@ -80,7 +80,7 @@ h1{
     height: 100%;
     margin: 0;
     padding: 80px 0;
-    background-color: #546a1f0e;
+    background-color: #fdfff7;
     box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
     transition-duration: 0.25s;
   }
@@ -159,7 +159,7 @@ h1{
     height: 100%;
     margin: 0;
     padding: 80px 0;
-    background-color: #546a1f0e;
+    background-color: #fdfff7;
     box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
     transition-duration: 0.25s;
   }
@@ -208,7 +208,6 @@ button {
   color: rgba(0, 0, 0, 0.7);
   font-weight: 800;
   font-family: Helvetica, sans-serif;
-  
 }
 label {
   text-transform: uppercase;
@@ -247,15 +246,15 @@ button:hover {
   src: url("font/hindguntur-regular-webfont.woff2");
 }
 
-img{
+img {
   width: 100%;
   height: 100%;
 }
-.about{
+.about {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
-.h1_single{
+.h1_single {
   font-family: "Overskrift", system-ui;
   text-align: center;
   color: var(--hovedfarve);
@@ -263,9 +262,8 @@ img{
   margin: 20px;
 }
 
-
 .inner-container {
-  background-color: #B5BE9D;
+  background-color: #b5be9d;
   padding: 100px;
   margin: 30px;
   gap: 30px;
@@ -286,18 +284,16 @@ img{
   line-height: 30px;
   text-align: justify;
   margin-bottom: 40px;
-  
 }
 
-.info-section p{
+.info-section p {
   font-family: Helvetica, system-ui;
   font-size: 18px;
   line-height: 1.6rem;
   border: solid rgba(0, 0, 0, 0.188) 0.1px;
   padding: 40px;
-
 }
- .info-section h2{
+.info-section h2 {
   font-family: Helvetica, system-ui;
   text-align: center;
   font-size: 40px;
@@ -310,71 +306,62 @@ img{
     padding: 80px;
   }
 
+  @media screen and (max-width: 900px) {
+    .inner-container {
+      width: 80%;
+    }
+    .about {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+    }
+  }
 
-@media screen and (max-width: 900px) {
- 
-  .inner-container {
-    width: 80%;
-  }
-  .about{
-    display: grid;
-    grid-template-columns: 1fr ;
-    grid-template-rows: 1fr;
-  
-  }
-}
-
-@media screen and (max-width: 600px) {
-  
-  .inner-container {
-    padding: 60px;
-  }
-  .about{
-    display: grid;
-    grid-template-columns: 1fr ;
-    grid-template-rows: 1fr;
-  
+  @media screen and (max-width: 600px) {
+    .inner-container {
+      padding: 60px;
+    }
+    .about {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+    }
   }
 }
-}
-
-
 
 /* ***************** breadcrumbs ****************** */
 .breadcrumbs {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 10px;
-    padding-left: 0;
-    margin: 16px;
-    margin-left: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  padding-left: 0;
+  margin: 16px;
+  margin-left: 0;
 }
 .breadcrumbs li {
   list-style: none;
 }
 .breadcrumbs a {
-    font-size: 12px;
-    background-color: white;
-    text-decoration: none;
-    color: var(--hovedfarve);
-
- }
+  font-size: 12px;
+  background-color: white;
+  text-decoration: none;
+  color: var(--hovedfarve);
+}
 .breadcrumbs p {
-    font-size: 12px;
-    color: rgba(0, 0, 0, 0.6);
- }
- .breadcrumbs a::after {
-    content: ">";
-    padding-left: 15px;
- }
- .breadcrumbs a:hover {
+  font-size: 12px;
   color: rgba(0, 0, 0, 0.6);
- }
+}
+.breadcrumbs a::after {
+  content: ">";
+  padding-left: 15px;
+}
+.breadcrumbs a:hover {
+  color: rgba(0, 0, 0, 0.6);
+}
 
-
- /* ***********  LOGO ************ */
+/* ***********  LOGO ************ */
 .logo img {
   max-width: 100px;
 }
@@ -386,7 +373,7 @@ img{
 .logo h1 {
   font-size: 30px;
   font-weight: 400;
-  color:#546a1f;
+  color: #546a1f;
   font-style: italic;
   margin: 0;
 }
@@ -397,19 +384,17 @@ img{
   font-size: 60px;
   padding-top: 10%;
   padding-bottom: 5%;
-
 }
 .landingpage {
   background-image: url(img/bg.webp);
   background-size: cover;
   margin-top: 5px;
   height: 75vh;
-   text-align: center;
+  text-align: center;
 }
 
-#index_body main{
+#index_body main {
   margin: 0;
-
 }
 .landingpage a {
   text-decoration: none;
@@ -431,14 +416,14 @@ img{
   border-color: var(--hovedfarve);
 }
 
-@media (min-width:900px) {
-.landingpage_2 {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-}  
-.h1_left {
-  text-align: center;
-}
+@media (min-width: 900px) {
+  .landingpage_2 {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+  .h1_left {
+    text-align: center;
+  }
 }
 
 @media (min-width: 300px) {
@@ -459,7 +444,6 @@ img{
   }
 }
 
-
 .link {
   margin-top: 30px;
   margin-bottom: 10px;
@@ -468,10 +452,10 @@ img{
 }
 
 .h1_left {
-text-align: left;
-margin-left: 5%;
-padding-top: 20px;
-font-size: 50px;
+  text-align: left;
+  margin-left: 5%;
+  padding-top: 20px;
+  font-size: 50px;
 }
 
 .feriemål a {
@@ -483,9 +467,9 @@ font-size: 50px;
   text-decoration: none;
 }
 
- .feriemål a:hover {
-    background-color: #546a1f;
-    color: white;
+.feriemål a:hover {
+  background-color: #546a1f;
+  color: white;
 }
 
 article {
@@ -511,16 +495,15 @@ footer img {
   max-width: 30px;
 }
 footer {
-  background-color:#546a1f19;
+  background-color: #546a1f19;
   padding: 5%;
   display: flex;
   flex-direction: row;
- justify-content: center;
- align-items: center;
+  justify-content: center;
+  align-items: center;
   gap: 100px;
   margin: 0;
   margin-top: 2em;
-
 }
 footer h3 {
   font-size: 12px;
