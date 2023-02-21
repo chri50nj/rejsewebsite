@@ -251,7 +251,10 @@ img{
   width: 100%;
   height: 100%;
 }
-
+.about{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
 .h1_single{
   font-family: "Overskrift", system-ui;
   text-align: center;
