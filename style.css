@@ -19,6 +19,11 @@ h1 {
 a {
   text-decoration: none;
 }
+p {
+  font-size: 15px;
+  line-height: 1.6rem;
+  color: rgba(0, 0, 0, 0.6);
+}
 /********************************** Mobil **********************************/
 @media (max-width: 740px) {
   /* toogle i højre hjørne (tjekboks), væk med den */
@@ -318,17 +323,11 @@ img {
   text-transform: uppercase;
 }
 
-.text {
-  font-family: Helvetica, system-ui;
-  font-size: 18px;
-  line-height: 30px;
-  text-align: justify;
-  margin-bottom: 40px;
-}
+
 
 .info-section p {
   font-family: Helvetica, system-ui;
-  font-size: 18px;
+  font-size: 15px;
   line-height: 1.6rem;
   border: solid rgba(0, 0, 0, 0.188) 0.1px;
   padding: 40px;
@@ -421,7 +420,8 @@ img {
   color: white;
   font-size: 60px;
   padding-top: 10%;
-  padding-bottom: 5%;
+  padding-bottom: 2%;
+  margin-bottom: 0;
 }
 .landingpage {
   background-image: url(img/bg.webp);
@@ -524,6 +524,12 @@ article {
   margin-left: 5%;
   padding-bottom: 40px;
   color: rgba(0, 0, 0, 0.6);
+}
+.landingpage h2 {
+  color: white;
+  text-transform: none;
+  margin-bottom: 40px;
+  margin-inline:5%;
 }
 /*  */
 
