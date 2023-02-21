@@ -19,7 +19,7 @@ function vis(json) {
   console.log(json);
   json.forEach((rejse) => {
     const klon = template.cloneNode(true);
-    klon.querySelector(".h1_single").textContent = rejse.destination;
+    klon.querySelector("h2").textContent = rejse.destination;
     main.appendChild(klon);
   });
 }

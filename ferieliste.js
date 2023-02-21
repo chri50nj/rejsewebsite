@@ -5,7 +5,7 @@ const _id = urlParams.get("_id");
 console.log("id", _id);
 const url = `https://rejseguide-349f.restdb.io/rest/destinationer/${_id}`;
 console.log(url);
-const imagePath = `https://rejseguide-349f.restdb.io/rest/destinationer/${_id}`.webp;
+const imagePath = `https://rejseguide-349f.restdb.io/rest/destinationer/${_id}.webp`;
 
 //const url = "https://rejseguide-349f.restdb.io/rest/destinationer"";
 
@@ -23,10 +23,11 @@ function hentData() {
 
 function visProdukt(rejse) {
   console.log(rejse);
-  document.querySelector(".h1_single").textContent = rejse.Destination;
+
+  document.querySelector(".h1_single").textContent = rejse.destination;
 
   document.querySelector("#about_img").src = "img/" + rejse.billede;
-  document.querySelector("img").src = imagePath;
+  document.querySelector("#about_img").src = imagePath;
 }
 
 hentData();
