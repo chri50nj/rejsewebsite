@@ -1,5 +1,5 @@
 /********************************** Mobil **********************************/
-@media (max-width: 620px) {
+@media (max-width: 740px) {
   /* toogle i højre hjørne (tjekboks), væk med den */
   #menu__toggle {
     opacity: 0;
@@ -70,37 +70,73 @@
   .menu__item {
     display: block;
     padding: 12px 24px;
-    color: #333;
+    color: rgba(0, 0, 0, 0.7);
     font-size: 15px;
     text-decoration: none;
     transition-duration: 0.25s;
+    text-transform: uppercase;
   }
 }
 /********************************** Computer **********************************/
-@media (min-width: 621px) {
+@media (min-width: 740px) {
   /* toogle i højre hjørne (tjekboks), væk med den */
   #menu__toggle {
     opacity: 0;
   }
+  .menu__box {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2em;
+  text-transform: uppercase;
+  font-size: 15px;
+
+  }
+  .menu__box a {
+  color: var(--hovedfarve);
+}
+  .menu__box a:hover {
+    color: rgba(0, 0, 0, 0.7);
+  }
+  
+  header {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    margin-inline: 5%;
+  }
+
+  .logo img {
+    max-width: 50px;
+  }
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+
+  }
   /* rotere streger så det danner et kryds, 45 grader */
-  #menu__toggle:checked + .menu__btn > span {
+  /* #menu__toggle:checked + .menu__btn > span {
     transform: rotate(45deg);
-  }
+  } */
   /* Fjerner dobbelt kryds */
-  #menu__toggle:checked + .menu__btn > span::before {
+  /* #menu__toggle:checked + .menu__btn > span::before {
     top: 0;
-  }
+  } */
   /* rotere den anden streger så det danner et kryds */
-  #menu__toggle:checked + .menu__btn > span::after {
+  /* #menu__toggle:checked + .menu__btn > span::after {
     top: 0;
     transform: rotate(90deg);
-  }
+  } */
   /* tilføjer menu boxen når der bliver trykket på krydset */
-  #menu__toggle:checked ~ .menu__box {
+  /* #menu__toggle:checked ~ .menu__box {
     left: 0;
-  }
+  } */
   /* menu krydset */
-  .menu__btn {
+  /* .menu__btn {
     position: fixed;
     top: 31px;
     width: 35px;
@@ -108,9 +144,9 @@
     cursor: pointer;
     z-index: 1;
     left: 1.5rem;
-  }
+  } */
   /* menu krydset, farve, størrelse osv, før menu boksen */
-  .menu__btn > span,
+  /* .menu__btn > span,
   .menu__btn > span::before,
   .menu__btn > span::after {
     display: block;
@@ -119,19 +155,19 @@
     height: 2px;
     background-color: var(--hovedfarve);
     transition-duration: 0.25s;
-  }
+  } */
   /* Den anden streg der danner brugermenuen (før) */
-  .menu__btn > span::before {
+  /* .menu__btn > span::before {
     content: "";
     top: -8px;
-  }
+  } */
   /* Den anden streg der danner brugermenuen (efter) */
-  .menu__btn > span::after {
+  /* .menu__btn > span::after {
     content: "";
     top: 8px;
-  }
+  } */
   /* menu boksen kommer frem */
-  .menu__box {
+  /* .menu__box {
     display: block;
     position: fixed;
     top: 0;
@@ -143,21 +179,23 @@
     background-color: #546a1f0e;
     box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
     transition-duration: 0.25s;
-  }
+  } */
   /* teksten i menu boksen */
-  .menu__item {
+  /* .menu__item {
     display: block;
     padding: 12px 24px;
-    color: #333;
+    color: rgba(0, 0, 0, 0.7);
     font-size: 20px;
     text-decoration: none;
     transition-duration: 0.25s;
-  }
+    text-transform: uppercase;
+  } */
   /* hover af teksten i menu boksen */
-  .menu__item:hover {
+  /* .menu__item:hover {
     background-color: var(--header);
-  }
-}
+  } */
+
+
 
 @font-face {
   font-family: "Overskrift";
