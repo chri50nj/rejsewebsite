@@ -1,4 +1,11 @@
-const url = "https://rejseguide-349f.restdb.io/rest/destinationer";
+const urlParams = new URLSearchParams(window.location.search);
+
+// find id
+console.log(urlParams);
+
+/* får fat i produktet */
+const dest = urlParams.get("dest");
+const url = `https://rejseguide-349f.restdb.io/rest/destinationer?q={"destination":"${dest}"}`; //?q={"fieldname":"emne"}
 
 const options = {
   headers: {
@@ -13,14 +20,11 @@ async function hentData() {
 }
 
 const main = document.querySelector("main");
-const template = document.querySelector("template").content;
 
 function vis(json) {
   console.log(json);
   json.forEach((rejse) => {
-    const klon = template.cloneNode(true);
-    klon.querySelector("h2").textContent = rejse.destination;
-    main.appendChild(klon);
+    document.querySelector(".h1_single").textContent = rejse.destination;
   });
 }
 hentData();
