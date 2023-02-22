@@ -1,10 +1,19 @@
-const url = "https://rejseguide-349f.restdb.io/rest/destinationer";
+//const url = "https://rejseguide-349f.restdb.io/rest/destinationer";
 
 const options = {
   headers: {
     "x-apikey": "63f49cb7478852088da68515",
   },
 };
+
+const urlParams = new URLSearchParams(window.location.search);
+
+// find id
+console.log(urlParams);
+
+/* får fat i produktet */
+const cat = urlParams.get("cat");
+const url = `https://rejseguide-349f.restdb.io/rest/destinationer?q={"ferietype":"${cat}"}`; //?q={"fieldname":"emne"}
 
 async function hentData() {
   const resspons = await fetch(url, options);
