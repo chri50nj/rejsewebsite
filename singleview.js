@@ -14,9 +14,13 @@ const options = {
 };
 
 async function hentData() {
-  const resspons = await fetch(url, options);
-  const json = await resspons.json();
+  const respons = await fetch(url, options);
+  const json = await respons.json();
+  data = json;
   vis(json);
+
+  const dest = urlParams.get("dest");
+  console.log(dest);
 }
 
 const main = document.querySelector("main");
@@ -25,6 +29,10 @@ function vis(json) {
   console.log(json);
   json.forEach((rejse) => {
     document.querySelector(".h1_single").textContent = rejse.destination;
+    document.querySelector(".beskrivelse").textContent = rejse.beskrivelse;
+    document.querySelector(".verdensdel").textContent = rejse.verdensdel;
+    document.querySelector(".hovedstad-stoersteby").textContent = rejse.hovedstad;
+    document.querySelector("#about_img").src = "img/" + rejse.billede;
   });
 }
 hentData();
