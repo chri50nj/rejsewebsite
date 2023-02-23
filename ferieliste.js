@@ -15,7 +15,7 @@ console.log(urlParams);
 const cat = urlParams.get("cat");
 // const url = `https://rejseguide-349f.restdb.io/rest/destinationer?q={"ferietype":"${cat}"}`; //?q={"fieldname":"emne"}
 
-const url = "testfil.json";
+const url = `testfil.json`;
 
 async function hentData() {
   const resspons = await fetch(url);
@@ -28,11 +28,13 @@ const template = document.querySelector("template").content;
 
 function vis(json) {
   json.forEach((rejse) => {
-    const klon = template.cloneNode(true);
-    klon.querySelector("#liste_billede").src = "img/" + rejse.billede;
-    klon.querySelector(".des_tekst").textContent = rejse.destination;
-    klon.querySelector(".link").href += rejse.destination;
-    main.appendChild(klon);
+    if (rejse.ferietype == cat) {
+      const klon = template.cloneNode(true);
+      klon.querySelector("#liste_billede").src = "img/" + rejse.billede;
+      klon.querySelector(".des_tekst").textContent = rejse.destination;
+      klon.querySelector(".link").href += rejse.destination;
+      main.appendChild(klon);
+    }
   });
 }
 hentData();
