@@ -32,5 +32,6 @@ function vis(rejse) {
   document.querySelector(".verdensdel").textContent = rejse.verdensdel;
   document.querySelector(".hovedstad-stoersteby").textContent = rejse.hovedstad;
   document.querySelector("#about_img").src = "img/" + rejse.billede;
+  document.querySelector(".breadcrumbs p").textContent = rejse.destination;
 }
 hentData();
