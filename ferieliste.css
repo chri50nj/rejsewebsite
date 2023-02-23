@@ -62,7 +62,7 @@
     height: 100%;
     margin: 0;
     padding: 80px 0;
-    background-color: #546a1f0e;
+    background-color: #EEF0E9;
     box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
     transition-duration: 0.25s;
   }
@@ -75,6 +75,9 @@
     text-decoration: none;
     transition-duration: 0.25s;
     text-transform: uppercase;
+  }
+   .menu__box li:hover {
+    background-color: #546a1f88;
   }
 }
 /********************************** Computer **********************************/
