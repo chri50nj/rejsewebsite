@@ -307,7 +307,8 @@ img {
 }
 .about {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 2fr 1fr;
+  gap: 2em;
 }
 .h1_single {
   font-family: "Overskrift", system-ui;
@@ -317,12 +318,24 @@ img {
   margin: 20px;
   padding-top: 2rem;
 }
+.text {
+  text-align: left;
+}
+.text h3 {
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.7);
+}
+.text h4 {
+  color: var(--hovedfarve);
+}
 
 .inner-container {
-  background-color: #b5be9d;
-  padding: 100px;
+  background-color: #546a1f19;
+  padding: 20px;
   margin: 30px;
-  gap: 30px;
+  text-align: left;
+  
 }
 
 .inner-container h2 {
@@ -347,11 +360,12 @@ img {
   font-size: 40px;
   color: var(--hovedfarve);
   padding: 30px;
+  margin-top: 20px;
 }
 
 @media screen and (max-width: 1200px) {
   .inner-container {
-    padding: 80px;
+    padding: 20px;
   }
 
   @media screen and (max-width: 900px) {
@@ -359,9 +373,10 @@ img {
       width: 80%;
     }
     .about {
-      display: grid;
-      grid-template-columns: 1fr;
-      grid-template-rows: 1fr;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
   }
 
@@ -370,9 +385,10 @@ img {
       padding: 60px;
     }
     .about {
-      display: grid;
-      grid-template-columns: 1fr;
-      grid-template-rows: 1fr;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
     }
   }
 }
@@ -404,10 +420,10 @@ border-radius: 20px;
   font-size: 12px;
   color: rgba(0, 0, 0, 0.6);
 }
-.breadcrumbs a::after {
+/* .breadcrumbs a::after {
   content: ">";
   padding-left: 5px;
-}
+} */
 .breadcrumbs a:hover {
   color: white;
   background-color: #546a1f;
@@ -716,10 +732,10 @@ article {
 .breadcrumbs p {
   font-size: 12px;
 }
-.breadcrumbs a::after {
+/* .breadcrumbs a::after {
   content: ">";
   padding-left: 20px;
-}
+} */
 .breadcrumbs a:hover {
-  color: black;
+  color: white;
 }
