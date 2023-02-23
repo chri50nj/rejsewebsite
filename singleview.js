@@ -1,30 +1,22 @@
 const urlParams = new URLSearchParams(window.location.search);
-
 /* får fat i produktet */
-const dest = urlParams.get("dest");
-// const url = `https://rejseguide-349f.restdb.io/rest/destinationer?q={"destination":"${dest}"}`; //?q={"fieldname":"emne"}
+const id = urlParams.get("id");
+const url = `hhttps://rejseguide-668d.restdb.io/rest/destinationer?q={"id":"${id}"}`; //?q={"fieldname":"emne"}
 
-const url = `${dest}.json`;
 
 const options = {
   headers: {
-    "x-apikey": "63f49cb7478852088da68515",
+    "x-apikey": "63f745c1478852088da6858c",
   },
 };
 
-async function hentData() {
-  const respons = await fetch(url);
-  const json = await respons.json();
-  data = json;
-  vis(json);
-
-  const dest = urlParams.get("dest");
-  console.log(dest);
+function hentData() {
+  fetch(url, options)
+    .then((respons) => respons.json())
+    .then(visData);
 }
 
-const main = document.querySelector("main");
-
-function vis(rejse) {
+function visData(rejse) {
   console.log(rejse);
 
   document.querySelector(".h1_single").textContent = rejse.destination;
