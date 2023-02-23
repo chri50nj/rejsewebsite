@@ -1,5 +1,5 @@
 const urlParams = new URLSearchParams(window.location.search);
-const type = urlParams.get("ferietype");
+const ferietype = urlParams.get("ferietype");
 const url = `https://rejseguide-668d.restdb.io/rest/destinationer?q={"ferietype":"${ferietype}"}`;
 
 const options = {
@@ -8,35 +8,29 @@ const options = {
   }
 };
 
-// const urlParams = new URLSearchParams(window.location.search);
+document.querySelector("#cat_overskrift").textContent = ferietype;
+document.querySelector(".breadcrumbs p").textContent = ferietype;
 
-// find id
-// console.log(urlParams);
+function hentData() {
+  fetch(url, options)
+  .then((respons) => respons.json()).then(visData);
 
-/* får fat i produktet */
-// const cat = urlParams.get("cat");
-// const url = `https://rejseguide-349f.restdb.io/rest/destinationer?q={"ferietype":"${cat}"}`; //?q={"fieldname":"emne"}
+}
 
-// const url = `testfil.json`;
 
-// async function hentData() {
-//   const resspons = await fetch(url);
-//   const json = await resspons.json();
-//   vis(json);
-// }
+const main = document.querySelector("main");
+const template = document.querySelector("template").content;
 
-// const main = document.querySelector("main");
-// const template = document.querySelector("template").content;
+function visData(json) {
+  json.forEach((rejse) => {
+    if (rejse.ferietype == ferietype) {
+      const klon = template.cloneNode(true);
+      klon.querySelector("#liste_billede").src = "img/" + rejse.billede;
+      klon.querySelector(".des_tekst").textContent = rejse.destination;
+      klon.querySelector(".link").href += rejse.destination;
+      main.appendChild(klon);
+    }
 
-// function vis(json) {
-//   json.forEach((rejse) => {
-//     if (rejse.ferietype == cat) {
-//       const klon = template.cloneNode(true);
-//       klon.querySelector("#liste_billede").src = "img/" + rejse.billede;
-//       klon.querySelector(".des_tekst").textContent = rejse.destination;
-//       klon.querySelector(".link").href += rejse.destination;
-//       main.appendChild(klon);
-//     }
-//   });
-// }
-// hentData();
+  });
+}
+hentData();
