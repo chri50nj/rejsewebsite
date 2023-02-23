@@ -113,22 +113,21 @@ p {
     opacity: 0;
   }
   .menu__box {
-  list-style: none;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  gap: 2em;
-  text-transform: uppercase;
-  font-size: 15px;
-
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2em;
+    text-transform: uppercase;
+    font-size: 15px;
   }
   .menu__box a {
-  color: var(--hovedfarve);
-}
+    color: var(--hovedfarve);
+  }
   .menu__box a:hover {
     color: rgba(0, 0, 0, 0.7);
   }
-  
+
   header {
     display: flex;
     flex-direction: row-reverse;
@@ -144,28 +143,26 @@ p {
     display: flex;
     align-items: center;
   }
-  
-
-  }
-  /* rotere streger så det danner et kryds, 45 grader */
-  /* #menu__toggle:checked + .menu__btn > span {
+}
+/* rotere streger så det danner et kryds, 45 grader */
+/* #menu__toggle:checked + .menu__btn > span {
     transform: rotate(45deg);
   } */
-  /* Fjerner dobbelt kryds */
-  /* #menu__toggle:checked + .menu__btn > span::before {
+/* Fjerner dobbelt kryds */
+/* #menu__toggle:checked + .menu__btn > span::before {
     top: 0;
   } */
-  /* rotere den anden streger så det danner et kryds */
-  /* #menu__toggle:checked + .menu__btn > span::after {
+/* rotere den anden streger så det danner et kryds */
+/* #menu__toggle:checked + .menu__btn > span::after {
     top: 0;
     transform: rotate(90deg);
   } */
-  /* tilføjer menu boxen når der bliver trykket på krydset */
-  /* #menu__toggle:checked ~ .menu__box {
+/* tilføjer menu boxen når der bliver trykket på krydset */
+/* #menu__toggle:checked ~ .menu__box {
     left: 0;
   } */
-  /* menu krydset */
-  /* .menu__btn {
+/* menu krydset */
+/* .menu__btn {
     position: fixed;
     top: 31px;
     width: 35px;
@@ -174,8 +171,8 @@ p {
     z-index: 1;
     left: 1.5rem;
   } */
-  /* menu krydset, farve, størrelse osv, før menu boksen */
-  /* .menu__btn > span,
+/* menu krydset, farve, størrelse osv, før menu boksen */
+/* .menu__btn > span,
   .menu__btn > span::before,
   .menu__btn > span::after {
     display: block;
@@ -185,18 +182,18 @@ p {
     background-color: var(--hovedfarve);
     transition-duration: 0.25s;
   } */
-  /* Den anden streg der danner brugermenuen (før) */
-  /* .menu__btn > span::before {
+/* Den anden streg der danner brugermenuen (før) */
+/* .menu__btn > span::before {
     content: "";
     top: -8px;
   } */
-  /* Den anden streg der danner brugermenuen (efter) */
-  /* .menu__btn > span::after {
+/* Den anden streg der danner brugermenuen (efter) */
+/* .menu__btn > span::after {
     content: "";
     top: 8px;
   } */
-  /* menu boksen kommer frem */
-  /* .menu__box {
+/* menu boksen kommer frem */
+/* .menu__box {
     display: block;
     position: fixed;
     top: 0;
@@ -209,8 +206,8 @@ p {
     box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
     transition-duration: 0.25s;
   } */
-  /* teksten i menu boksen */
-  /* .menu__item {
+/* teksten i menu boksen */
+/* .menu__item {
     display: block;
     padding: 12px 24px;
     color: rgba(0, 0, 0, 0.7);
@@ -219,18 +216,18 @@ p {
     transition-duration: 0.25s;
     text-transform: uppercase;
   } */
-  /* hover af teksten i menu boksen */
-  /* .menu__item:hover {
+/* hover af teksten i menu boksen */
+/* .menu__item:hover {
     background-color: var(--header);
   } */
-
 
 /** Kontakt form **/
 #kontakt_body p {
   text-align: center;
   margin-inline: 20%;
   font-family: Helvetica, sans-serif;
-  color: rgba(0, 0, 0, 0.6);
+  font-size: 1.2rem;
+  color: rgba(0, 0, 0, 0.62);
 }
 form {
   display: flex;
@@ -258,6 +255,12 @@ button {
 label {
   text-transform: uppercase;
   font-size: 15px;
+  display: grid;
+  gap: 5px;
+}
+
+#baggrund {
+  background-image: url("img/formbg.webp");
 }
 
 button {
@@ -305,6 +308,7 @@ img {
   color: var(--hovedfarve);
   font-size: 70px;
   margin: 20px;
+  padding-top: 2rem;
 }
 
 .inner-container {
@@ -322,8 +326,6 @@ img {
   color: rgba(0, 0, 0, 0.7);
   text-transform: uppercase;
 }
-
-
 
 .info-section p {
   font-family: Helvetica, system-ui;
@@ -529,7 +531,7 @@ article {
   color: white;
   text-transform: none;
   margin-bottom: 40px;
-  margin-inline:5%;
+  margin-inline: 5%;
 }
 /*  */
 
