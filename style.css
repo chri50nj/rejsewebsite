@@ -238,7 +238,7 @@ form {
   align-items: center;
   padding: 2rem;
   border-radius: 8px;
-  gap: 30px;
+  gap: 15px;
 }
 
 .form-felt {
@@ -251,15 +251,23 @@ textarea,
 select,
 button {
   display: block;
-  color: rgba(0, 0, 0, 0.7);
+  color:var(--hovedfarve);
   font-weight: 800;
   font-family: Helvetica, sans-serif;
+  font-size: 15px;
+  padding: 10px;
+  padding-inline: 20px;
+
 }
+input, textarea {
+  border: #546a1f solid 1px;
+}
+
 label {
   text-transform: uppercase;
   font-size: 15px;
   display: grid;
-  gap: 5px;
+  gap: 1px;
 }
 
 button {
@@ -384,10 +392,13 @@ img {
   list-style: none;
 }
 .breadcrumbs a {
-  font-size: 12px;
-  background-color: white;
-  text-decoration: none;
-  color: var(--hovedfarve);
+border: #546a1f solid 1px;
+color: #546a1f;
+text-transform: uppercase;
+padding: 10px;
+font-size: 10px;
+border-radius: 20px;
+
 }
 .breadcrumbs p {
   font-size: 12px;
@@ -395,10 +406,11 @@ img {
 }
 .breadcrumbs a::after {
   content: ">";
-  padding-left: 15px;
+  padding-left: 5px;
 }
 .breadcrumbs a:hover {
-  color: rgba(0, 0, 0, 0.6);
+  color: white;
+  background-color: #546a1f;
 }
 
 /* ***********  LOGO ************ */
