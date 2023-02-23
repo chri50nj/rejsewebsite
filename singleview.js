@@ -1,7 +1,7 @@
 const urlParams = new URLSearchParams(window.location.search);
 /* får fat i produktet */
 const id = urlParams.get("id");
-const url = `hhttps://rejseguide-668d.restdb.io/rest/destinationer?q={"id":"${id}"}`; //?q={"fieldname":"emne"}
+const url = `https://rejseguide-668d.restdb.io/rest/destinationer?q={"id":"${id}"}`; //?q={"fieldname":"emne"}
 
 
 const options = {
@@ -12,17 +12,16 @@ const options = {
 
 function hentData() {
   fetch(url, options)
-    .then((respons) => respons.json())
-    .then(visData);
+    .then((respons) => respons.json()).then(visProdukt);
+
 }
 
-function visData(rejse) {
-  console.log(rejse);
+function visProdukt(product) {
 
-  document.querySelector(".h1_single").textContent = rejse.destination;
-  document.querySelector(".beskrivelse").textContent = rejse.beskrivelse;
-  document.querySelector(".verdensdel").textContent = rejse.verdensdel;
-  document.querySelector(".hovedstad-stoersteby").textContent = rejse.hovedstad;
-  document.querySelector("#about_img").src = "img/" + rejse.billede;
+  document.querySelector(".h1_single").textContent = product.destination;
+  document.querySelector(".beskrivelse").textContent = product.beskrivelse;
+  document.querySelector(".verdensdel").textContent = product.verdensdel;
+  document.querySelector(".hovedstad-stoersteby").textContent = product.hovedstad;
+  document.querySelector("#about_img").src = "img/" + product.billede;
 }
 hentData();
