@@ -1,8 +1,6 @@
 const urlParams = new URLSearchParams(window.location.search);
-/* får fat i produktet */
-const id = urlParams.get("id");
-const url = `https://rejseguide-668d.restdb.io/rest/destinationer?q={"id":"${id}"}`; //?q={"fieldname":"emne"}
-
+const destination = urlParams.get("destination");
+const url = `https://rejseguide-668d.restdb.io/rest/destinationer?q={"destination":"${destination}"}`;
 
 const options = {
   headers: {
@@ -11,17 +9,12 @@ const options = {
 };
 
 function hentData() {
-  fetch(url, options)
-    .then((respons) => respons.json()).then(visProdukt);
+  fetch(url, options).then((respons) => respons.json()).then(visData);
+}
+
+function visData(product) {
+document.querySelector(".h1_single").textContent = product.ferietype;
 
 }
 
-function visProdukt(product) {
-
-  document.querySelector(".h1_single").textContent = product.destination;
-  document.querySelector(".beskrivelse").textContent = product.beskrivelse;
-  document.querySelector(".verdensdel").textContent = product.verdensdel;
-  document.querySelector(".hovedstad-stoersteby").textContent = product.hovedstad;
-  document.querySelector("#about_img").src = "img/" + product.billede;
-}
 hentData();
